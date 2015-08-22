@@ -1,16 +1,13 @@
 import {
-  AUTH_LOAD,
-  AUTH_LOAD_SUCCESS,
-  AUTH_LOAD_FAIL,
-  AUTH_LOGIN,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAIL,
-  AUTH_LOGOUT,
-  AUTH_LOGOUT_SUCCESS,
-  AUTH_LOGOUT_FAIL
+  AUTH_LOAD, AUTH_LOAD_SUCCESS, AUTH_LOAD_FAIL,
+  AUTH_LOGIN, AUTH_LOGIN_SUCCESS, AUTH_LOGIN_FAIL,
+  AUTH_LOGOUT, AUTH_LOGOUT_SUCCESS, AUTH_LOGOUT_FAIL,
+  FBAUTH, FBAUTH_SUCCESS, FBAUTH_FAIL,
+  REGISTER, REGISTER_SUCCESS, REGISTER_FAIL
 } from '../actions/actionTypes';
 
 const initialState = {
+  username: 'visitor',
   loaded: false
 };
 
@@ -70,6 +67,29 @@ export default function info(state = initialState, action = {}) {
         loggingOut: false,
         logoutError: action.error
       };
+    case FBAUTH:
+      return {
+        ...state
+      };
+    case FBAUTH_SUCCESS:
+      return {
+        ...state,
+        data: action.data
+      };
+    case REGISTER:
+      return {
+        ...state
+      };
+    case REGISTER_SUCCESS:
+      return {
+        ...state,
+        user: action.result
+      };
+    case REGISTER_FAIL:
+      return {
+        ...state
+      };
+
     default:
       return state;
   }

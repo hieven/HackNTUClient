@@ -1,0 +1,42 @@
+.mood-card {
+  margin-top: 60px;
+
+  .card-content {
+    background-color: #FAFAFA;
+    text-align: center;
+    padding: 15px 20px 40px 20px;
+
+    img {
+      width: 30px;
+    }
+
+    span {
+      vertical-align: super;
+      margin-left: 10px;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  .card-action {
+    padding: 10px;
+    background-color: #00BBD3;
+      
+    .box-title {
+      img {
+        width: 18px;
+      }
+      span {
+        margin-left: 10px;
+        vertical-align: super;
+      }
+    }
+    .share {
+      img {
+        width: 18px;
+      }
+    }
+  }
+}

@@ -7,7 +7,6 @@ import compression from 'compression';
 import httpProxy from 'http-proxy';
 import path from 'path';
 import createStore from './redux/create';
-import api from './api/api';
 import ApiClient from './ApiClient';
 import universalRouter from './universalRouter';
 import Html from './Html';
@@ -67,11 +66,11 @@ if (config.port) {
     if (err) {
       console.error(err);
     } else {
-      api().then(() => {
-        console.info('==> ✅  Server is listening');
-        console.info('==> 🌎  %s running on port %s, API on port %s', config.app.name, config.port, config.apiPort);
-        console.info('----------\n==> 💻  Open http://localhost:%s in a browser to view the app.', config.port);
-      });
+      // api().then(() => {
+      console.info('==> ✅  Server is listening');
+      console.info('==> 🌎  %s running on port %s, API on port %s', config.app.name, config.port, config.apiPort);
+      console.info('----------\n==> 💻  Open http://localhost:%s in a browser to view the app.', config.port);
+      // });
     }
   });
 } else {

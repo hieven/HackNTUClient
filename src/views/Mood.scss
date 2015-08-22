@@ -1,0 +1,27 @@
+.mood-wrapper {
+  padding: 50px;
+  height: calc(100vh - 55px);
+  
+  .row {
+    height: 33.333%;
+    margin-bottom: 0;
+
+    .mood {
+      padding:  3px;
+      position: relative;
+      height:   100%;
+
+      img {
+        height: 100%;
+        margin: auto;
+        left:   -9999px;
+        right:  -9999px;
+      }
+
+      &.odd img {
+        float: right;
+      }
+    }
+    
+  }
+}
