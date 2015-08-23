@@ -3,12 +3,12 @@ import React, {Component, Proptype} from 'react';
 export default class WeeklyReport extends Component {
 
   componentDidMount() {
-    const emo_image = require('../images/emo_yabee.png');
+    
     // TODO: checkout react-highchart
     $('.highchart').highcharts({
       xAxis: {
         type: 'linear',
-        categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        categories: ["yabee", "angry", "sad", "happy", "scared", "peace"]
       },
       yAxis: {
         title: { enabled: false },
@@ -24,7 +24,10 @@ export default class WeeklyReport extends Component {
             enabled: true,
             useHTML: true,
             padding: 40,
-            formatter: () => `<img src=${emo_image} width=100px />`
+            formatter: function () {
+                        const emo_image = require(`../images/emo_${this.x}.png`);
+                        return `<img id="mood" src=${emo_image} />`;
+                    }
           }
         },
         column: { groupPadding: 0, borderWidth: 0 }
