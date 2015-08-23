@@ -73,13 +73,10 @@ export default class MoodDepict extends Component {
     e.preventDefault();
     const longitude = nome.getLongitude();
     const latitude  = nome.getLatitude();
-    this.setState({longitude, latitude});
-    const mood = this.state;
-
+    const mood = {...this.state, longitude, latitude};
+    console.log(mood);
     this.props.addMood(mood);
-    this.setState({
-      depiction: ''
-    });
+
   }
 }
 
