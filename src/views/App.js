@@ -106,7 +106,6 @@ export default class App extends Component {
   render() {
     const {user} = this.props;
     const default_avatar = require('../images/avatar.png');
-    console.log(user.username);
     require('./App.scss');
     return (
       <div className="app">
