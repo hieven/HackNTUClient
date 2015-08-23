@@ -5,7 +5,7 @@ export default class WeeklyReport extends Component {
   componentDidMount() {
     const emo_image = require('../images/emo_yabee.png');
     // TODO: checkout react-highchart
-    $('.weekly-report').highcharts({
+    $('.highchart').highcharts({
       xAxis: {
         type: 'linear',
         categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -44,6 +44,10 @@ export default class WeeklyReport extends Component {
     require('./WeeklyReport.scss');
     return (
       <div className="weekly-report container">
+        <div className="period center-align">
+          <p className="btn">2015 Aug 16th - Aug 23rd</p>
+        </div>
+        <div className="highchart"></div>
       </div>
     );
   }

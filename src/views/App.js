@@ -106,6 +106,7 @@ export default class App extends Component {
   render() {
     const {user} = this.props;
     const default_avatar = require('../images/avatar.png');
+    console.log(user.username);
     require('./App.scss');
     return (
       <div className="app">
@@ -114,7 +115,7 @@ export default class App extends Component {
         <div className="navbar-fixed">
           <nav>
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo">Emoji Diary</a>
+              <a href="#" className="brand-logo">Emo Diary</a>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="fa fa-bars"></i></a>
 
               <ul className="right hide-on-med-and-down">

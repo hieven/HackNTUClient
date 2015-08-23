@@ -1,23 +1,9 @@
-@media screen and (max-width: 768px) {
-  img {
-    width: 60px;
-  }
-}
+.weekly-report {
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  img {
-    width: 70px;
-  }
-}
+  padding-top: 20px;
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  img {
-    width: 80px;
+  .period {
+    margin-bottom: 40px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  img {
-    width: 90px;
-  }
 }
